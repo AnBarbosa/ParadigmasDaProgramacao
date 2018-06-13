@@ -1,0 +1,30 @@
+Usando Racket
+
+Comentários
+;Isso é um comentário
+
+Executar comandos do shell - vírgula shell comando
+, shell clear -> limpa a tela
+, shell ls -> mostra conteudo do diretório
+
+
+Booleanas:
+#t = true;
+#f = false
+
+(if bool true false)
+ex:
+	(if #t "verdadeiro" "falso") -> "verdadeiro"
+	(if #f "verdadeiro" "falso") -> "falso"
+
+OR e AND - operadores enário
+
+(and b1 b2) 
+(and b1 b2 b3 b4) == (and b1 (and b2 b3)) 
+
+
+XOR - operador binário
+(xor b1 b2)
+(xor b1 b2 b3) <= ERRO
+
+
