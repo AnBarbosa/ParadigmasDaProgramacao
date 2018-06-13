@@ -1,12 +1,7 @@
 #lang racket
 
 (require quickcheck)
-
-(define (par? n)
-    (= (modulo n 2) 0))
-    
-(define (impar? n)
-    (= (modulo n 2) 1))
+(require "funcoesMatematicas.rkt")
 
 ; teste por Propriedades
 ; propriedade: O sucessor de todo par eh IMPAR
@@ -20,9 +15,15 @@
     (property ([n arbitrary-integer])
             (==> (par? n) (not (impar? n)))))
 
+
+(define fatorial-n-fatorial-n+1
+    (property 
+        ([n arbitrary-natural])
+        (= (* (+ n 1) (fatorial n)) (fatorial (+ n 1)))))
+
 (quickcheck prop-alternancia-par-impar)
 (quickcheck prop-se-impar-nao-par)
-
+(quickcheck fatorial-n-fatorial-n+1)
 ; propriedade: O predecessor de todo par é PAR
 
 ; Teste por Exemplos
