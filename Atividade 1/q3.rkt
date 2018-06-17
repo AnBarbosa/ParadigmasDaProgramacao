@@ -2,7 +2,7 @@
 
 ; Defina um procedimento que tome três números como argumentos e
 ; retorne a soma dos quadrados dos dois maiores números
-
+;
 
 (define (maior-soma-dois-de-tres a b c) 
     (let (
