@@ -10,4 +10,4 @@
          (let (
                (maior1 (car lista))
                (maior2 (car (cdr lista)))               )
-           (+ maior1 maior2))))
+           (+ (* maior1 maior1) (* maior2 maior2)))))
